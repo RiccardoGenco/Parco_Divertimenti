@@ -5,7 +5,7 @@ import java.util.Random;
 public class parco {
 	public static void main(String[] args) {
 	// 
-			int minutiApertura = 1040;
+			int minutiApertura = 720;
 	        int costoAttrazione1 = 22, capacitaAttrazione1 = 4;
 	        int costoAttrazione2 = 15, capacitaAttrazione2 = 6;
 	        int costoAttrazione3 = 15, capacitaAttrazione3 = 5;
@@ -19,7 +19,8 @@ public class parco {
 	        double tempoAttesaTotale1 = 0, tempoAttesaTotale2 = 0, tempoAttesaTotale3 = 0;
 	        int t = 15;
 	        Random random = new Random();
-
+	        
+	        for (int d = 0; d <= 4; d++) {
 	        for (int minuto = 0; minuto < minutiApertura; minuto++) {
 	            visitatoriTotali++;
 	            int budget = 10 + random.nextInt(26);  // Budget casuale tra 10 e 35
@@ -166,6 +167,8 @@ public class parco {
 	        }
 
 	        // Stampa i risultati
+	        System.out.println("Giorno:"+(d+1));
+	        
 	        System.out.println("Guadagno netto totale: " + guadagnoTotale + " euro");
 	        if (visitatoriSoddisfatti1>visitatoriSoddisfatti2 && visitatoriSoddisfatti1 >visitatoriSoddisfatti3) 
 	        
@@ -183,9 +186,10 @@ public class parco {
 	        System.out.println("Tempo medio di attesa per Attrazione 1: " + tempoAttesaMedio1 + " minuti");
 	        System.out.println("Tempo medio di attesa per Attrazione 2: " + tempoAttesaMedio2 + " minuti");
 	        System.out.println("Tempo medio di attesa per Attrazione 3: " + tempoAttesaMedio3 + " minuti");
-	    
+	   
 
 		}
 
 	}
 
+}
