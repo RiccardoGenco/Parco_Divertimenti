@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class parco {
 	public static void main(String[] args) {
-	// 
+	System.out.println("benvenuti");
 			int minutiApertura = 1040;
 	        int costoAttrazione1 = 22, capacitaAttrazione1 = 4;
 	        int costoAttrazione2 = 15, capacitaAttrazione2 = 6;
